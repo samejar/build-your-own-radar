@@ -21,7 +21,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      ASSET_PATH: /build-your-own-radar
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js
