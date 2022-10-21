@@ -11,7 +11,6 @@ const postcssPresetEnv = require('postcss-preset-env')
 const cssnano = require('cssnano')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-
 const env = args.envFile
 if (env) {
   // Load env file
@@ -42,9 +41,7 @@ const plugins = [
     'process.env.GTM_ID': JSON.stringify(process.env.GTM_ID),
   }),
   new CopyWebpackPlugin({
-    patterns: [
-      { from: 'radar' }
-    ]
+    patterns: [{ from: 'radar' }],
   }),
 ]
 
