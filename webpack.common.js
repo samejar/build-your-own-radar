@@ -111,7 +111,7 @@ module.exports = {
       {
         test: /\.(png|jpg|jpeg|gif|ico|svg)$/,
         exclude: /node_modules/,
-        type: 'asset/resource',
+        type: 'asset',
       },
       {
         test: require.resolve('jquery'),
