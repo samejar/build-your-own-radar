@@ -1,0 +1,105 @@
+name,ring,quadrant,isNew,description,5 rings,Category,Notes
+,Promote,Services,FALSE,,Promote,,Placholder for ordering radar
+,Pilot,Services,FALSE,,Pilot,,Placholder for ordering radar
+,Evaluate,Services,FALSE,,Evaluate,,Placholder for ordering radar
+,Hold,Services,FALSE,,Retire,,Placholder for ordering radar
+MSK (Managed Kafka),Promote,Services,FALSE,,Promote,,
+Iris,Pilot,Services,FALSE,,Pilot,,
+Kafka,Hold,Services,FALSE,"<strong>Descriptions are written in HTML</strong> 
+
+<p><strong>Description:</strong></p>
+<p><strong>Reason for placing:</strong></p
+<p><strong>Adopters:</strong></p>",Retire,,
+Aurora MySQL,Promote,Services,FALSE,,Promote,,
+ElastiCache (Redis),Promote,Services,FALSE,,Promote,,
+CouchBase (self-managed),Hold,Services,FALSE,,Retire,,
+CouchBase Capella,Promote,Services,FALSE,,Promote,,
+MySQL,Hold,Services,FALSE,,Retire,,
+S3,Promote,Services,FALSE,,Promote,,
+Java 17,Promote,Languages and Frameworks,FALSE,"<a href=""https://en.wikipedia.org/wiki/Java_version_history#Java_17"">Java 17</a> is the latest long-term support (LTS) version of Java. While there are promising new features, such as Sealed Classes, it’s the switch to the new LTS process that is noteworthy. Avoid the “too expensive to update” trap and assess new releases of Java as and when they become available.",Promote,,
+Amazon Corretto JDK,Promote,Languages and Frameworks,FALSE,"<a href=""https://aws.amazon.com/corretto/"">Amazon Corretto JDK</a> is a no-cost, multiplatform, production-ready distribution of the Open Java Development Kit.<br/>
+The primary differentiator for Corretto is that we have a commercial relationship with AWS and &quot;if you already have an AWS Support Plan, Corretto is covered on the same basis as all other supported AWS Services and software&quot;.<br/>
+<br/>
+Additional Resources:
+<br/>
+
+<ul>
+<li><a href=""https://docs.google.com/document/d/1IE6pvi-Vu4j94zusMVFCdjM2JSn8ZZc6VHa2iSCWZCE/edit#"">VEP 4: Java Container Images Recommendation</a></li>
+</ul>",Promote,,
+Kotlin,Pilot,Languages and Frameworks,FALSE,"<a href=""https://kotlinlang.org/"">Kotlin</a> is a cross-platform, statically typed, general-purpose programming language with type inference. Kotlin is designed to interoperate fully with Java and the JVM version of Kotlin's standard library depends on the Java Class Library but type inference allows its syntax to be more concise.<br/>
+<br/>
+There are a number of Java teams that are now running Kotlin services in production and although JVM runtime is well understood, Kotlin development does not have the same resources available as for Java services. ",Pilot,,
+Go,Pilot,Languages and Frameworks,FALSE,"The <a href=""https://golang.org/"">Go language</a> is a statically typed, compiled programming language. While steadfastly single paradigm in a world of increasingly complex languages, it seems to keep a nice balance between expressiveness, power, and simplicity.<br/>
+<br/>
+There are a small number of teams (NeRu, OSS) using Go to write services so it will be harder to find support internally than for JVM based projects.",Pilot,,
+JavaScript,Hold,Languages and Frameworks,FALSE,"<a href=""https://en.wikipedia.org/wiki/JavaScript"">JavaScript</a> is a dynamically typed programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. JavaScript engines were originally used only in web browsers, but are now core components of some servers and a variety of applications. The most popular runtime system for this usage is Node.js.<br/>
+<br/>
+JavaScript has been used extensively for browser-based projects but TypeScript has become the default for new projects within API Engineering.",Endure,,
+TypeScript,Promote,Languages and Frameworks,FALSE,"<a href=""https://www.typescriptlang.org/"">TypeScript</a>, is a strongly typed programming language that builds on JavaScript with support for tighter integration with IDEs and development tooling. <br/>
+<br/>
+Large-scale projects benefit most from the type safety and our developers are using TypeScript as the default for new projects targeting browsers or node.js.",Promote,,
+node.js/V8,Evaluate,Languages and Frameworks,FALSE,"<a href=""https://nodejs.org/en/"">node.js</a> is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine (i.e. V8 engine) and executes JavaScript code outside a web browser.<br/>
+<br/>
+node.js is used in the BiFrost project to implement the Backend for Frontend pattern but is not expected to be used beyond this use case.",Evaluate,,
+Python 3,Hold,Languages and Frameworks,FALSE,"<a href=""https://www.python.org/"">Python</a> is a high-level, general-purpose programming language. Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a &quot;batteries included&quot; language due to its comprehensive standard library.<br/>
+<br/>
+Python is used in end-to-end testing and some SRE automation tooling, we should not expand usage of Python beyond these use cases.",Endure,,
+Gradle,Promote,Languages and Frameworks,FALSE,"<a href=""https://docs.gradle.org"">Gradle</a> is an open-source build automation tool for JVM-based projects focused on flexibility and performance.",Promote,Build,What about Maven? Jib/JLink..
+Spring Boot,Promote,Languages and Frameworks,FALSE,"<a href=""https://spring.io/projects/spring-boot"">Spring Boot</a> makes it easy to create stand-alone, production-grade JVM-based Spring Applications that you can ""just run"". It takes an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss.<br/>
+<br/>
+There are a number of projects in production using Spring Boot and it is the default framework for a number of teams.",Promote,Framework,
+Micronaut,Promote,Languages and Frameworks,FALSE,"<a href=""https://micronaut.io/"">Micronaut</a> is a modern, JVM-based, full-stack framework for building modular, easily testable microservice and serverless applications. It distinguishes itself through a small memory footprint and short startup time; it achieves these improvements by avoiding runtime reflection for dependency injection (DI) and proxy generation, a common shortcoming of traditional frameworks, and instead uses a DI/AOP container which performs dependency injection at compile time. Micronaut uses Netty and has first-class support for reactive programming and Kotlin.<br/>
+<br/>
+There are a small number of projects in production using Micronaut and is the default framework for a number of teams.",Promote,Framework,
+Dropwizard,Hold,Languages and Frameworks,FALSE,"<a href=""https://www.dropwizard.io"">Dropwizard</a> pulls together stable, mature libraries from the Java ecosystem into a simple, lightweight package that lets you focus on getting things done. Dropwizard has out-of-the-box support for sophisticated configuration, application metrics, logging, operational tools, and much more.<br/>
+<br/>
+Dropwizard is used in a number of projects but is not recommended for new projects and should be replaced in existing project should the opportunity arise.",Endure,Framework,
+nestjs.com,Evaluate,Languages and Frameworks,FALSE,"<a href=""nestjs.com"">NestJS</a> is a framework for building efficient, scalable node.js server-side applications. It uses progressive JavaScript, is built with and fully supports TypeScript and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming). The mental model to develop NestJS is similar to the server-side version of Angular or the TypeScript version of Spring Boot, so the learning curve for developers is low.<br/>
+<br/>
+NestJS is used in the BiFrost project.",Evaluate,Framework,
+Webpack,Promote,Languages and Frameworks,FALSE,"<a href=""https://webpack.js.org/"">Webpack</a> is a static module bundler for modern JavaScript applications, it provides a single dependency tree for static assets, allowing flexible manipulation of JavaScript, CSS, etc. and minimizing what needs to be sent to the browser.<br/>
+<br/>
+Webpack is used to build and package many projects.",Promote,Build,
+Vite,Evaluate,Languages and Frameworks,FALSE,"<a href=""https://vitejs.dev/"">Vite</a> is a build tool that aims to provide a faster and leaner development experience for modern web projects.<br/>
+<br/>
+Vite is used in the BiFrost project.",Evaluate,Build,Used in BiFrost
+rollup.js,Evaluate,Languages and Frameworks,FALSE,"<a href=""https://rollupjs.org/guide/en/"">rollup.js</a> is a module bundler for JavaScript which compiles small pieces of code into something larger and more complex, such as a library or application.<br/>
+<br/>
+rollup.js is used by Vivid.",Evaluate,Build,Vivid
+Vue.js 3,Promote,Languages and Frameworks,FALSE,"<a href=""https://vuejs.org/"">Vue.js</a> has become one of the successfully applied and trusted frontend JavaScript frameworks among our community. Although there are other, well-adopted alternatives, such as React, the simplicity of Vue.js in API design, its clear segregation of directives and components (one file per component idiom) and its simpler state management have made it a compelling option among others.",Promote,Framework,
+React,Hold,Languages and Frameworks,FALSE,"<a href=""https://reactjs.org"">React</a> is a JavaScript library for building user interfaces. React apps are made out of <em>components</em>. A component is a piece of the UI (user interface) that has its own logic and appearance. A component can be as small as a button, or as large as an entire page.<br/>
+<br/>
+React is used in NeRu but we do not recommend for new projects.",Endure,Framework,
+Vivid,Promote,Languages and Frameworks,FALSE,"<a href=""https://github.com/vonage/vivid-3"">Vivid</a> is Vonage's design system platform targeted to provide incorporated, battery-charged web components.",Promote,Presentation,
+Volta,Hold,Languages and Frameworks,FALSE,"<a href=""https://confluence.vonage.com/display/VOL/Welcome+to+Volta"">Volta</a> is a Vonage Design System, built and maintained by the Product Design Team to provide pixel-perfect reusable components for developers.<br/>
+<br/>
+Volta is now deprecated in favour of Vivid, any projects using Volta should be migrated to Vivid.",Retire,,
+JUnit,Promote,Languages and Frameworks,FALSE,"<a href=""https://junit.org/junit5/"">JUnit 5</a> is an up-to-date foundation for developer-side testing on the JVM enabling many different styles of testing.",Promote,Testing,Is it no-brainer yet?
+Mockito,Promote,Languages and Frameworks,FALSE,"<a href=""https://site.mockito.org/"">Mockito</a> is a JVM mocking framework that lets you write beautiful tests with a clean &amp; simple API. Mockito tests are very readable and they produce clean verification errors.",Promote,Testing,
+WireMock,Promote,Languages and Frameworks,FALSE,"<a href=""https://wiremock.org/"">WireMock</a> is an HTTP mock server. At its core it is web server that can be primed to serve canned responses to particular requests (stubbing) and that captures incoming requests so that they can be checked later (verification). It also has an assortment of other useful features including record/playback of interactions with other APIs, injection of faults and delays, simulation of stateful behaviour. It can be used as a library by any JVM application, or run as a standalone process either on the same host as the system under test or a remote server.",Promote,Testing,
+Gatling,Promote,Languages and Frameworks,FALSE,"<a href=""https://gatling.io/open-source/"">Gatling</a> is an open-source load testing solution designed for continuous load testing and integrates with your development pipeline. Gatling includes a web recorder and colorful reports. Tests are written in a Domain Specific Language (DSL), in order to make test scenarios readable for everyone: Scala, Java or Kotlin.",Promote,Testing,"Locust, JMeter"
+Jest,Promote,Languages and Frameworks,FALSE,"<a href=""https://jestjs.io/"">Jest</a> is a JavaScript testing framework designed to ensure correctness of any JavaScript codebase. It allows you to write tests with an approachable, familiar and feature-rich API that gives you results quickly. Jest works with projects using: TypeScript, Vue, Node, React, Angular, Babel and more.",Promote,,
+Cypress,Evaluate,Languages and Frameworks,FALSE,"<a href=""https://www.cypress.io/"">Cypress</a> is a front end testing tool built for the modern web. Cypress is most often compared to Selenium; however Cypress is both fundamentally and architecturally different so is not constrained by the same restrictions. Cypress enables you to write all types of tests End-to-end tests, Integration tests and Unit tests; Cypress can test anything that runs in a browser.<br/>
+<br/>
+Cypress is being evaluated on the Customer Dashboard as a smoke test tool.",Evaluate,,
+Selenium,Promote,Languages and Frameworks,FALSE,"<a href=""https://www.selenium.dev/"">Selenium</a> is a browser automation tool that is primarily used to create robust, browser-based regression automation suites and tests. Selenium WebDriver drives a browser natively, as a user would, either locally or on a remote machine using the Selenium server.",Promote,,
+TestContainers,Promote,Languages and Frameworks,FALSE,"<a href=""https://www.testcontainers.org/"">TestContainers</a> is a Java library that allows containers to be used as part of JUnit based tests, providing lightweight, throwaway instances of services, common databases, LocalStack, or anything else that can run in Docker.",Promote,Testing,
+AssertJ,Promote,Languages and Frameworks,FALSE,"<a href=""https://assertj.github.io/doc/"">AssertJ</a> is a Java library that provides a rich set of assertions, truly helpful error messages, improves test code readability and is designed to be super easy to use within IDEs.",Promote,Testing,What about Google Truth?
+pytest,Hold,Languages and Frameworks,FALSE,"The <a href=""https://docs.pytest.org"">pytest</a> framework makes it easy to write small, readable tests, and can scale to support complex functional testing for applications and libraries.<br/>
+<br/>
+pytest has been used for much of our end-to-end testing and there are a number of libraries that include fixture creation to help generate test data. pytest should not be considered a default for end-to-end testing in new projects, any choice should be discussed with the engineering team.",Endure,Testing,
+Caffeine,Promote,Languages and Frameworks,FALSE,"<a href=""https://github.com/ben-manes/caffeine"">Caffeine</a> is a high performance Java caching library providing a near optimal hit rate. Caffeine provide flexible construction to create a cache with a combination of the optional features: automatic loading of entries into the cache, async refresh, size- and time-based eviction, eviction notifications and statistics. A Kotlin wrapper is offered by the <a href=""https://github.com/sksamuel/aedile"">aedile</a> project.",Promote,Caching,Consider EHCache also?
+OkHttp,Promote,Languages and Frameworks,FALSE,"<a href=""https://square.github.io/okhttp/"">OkHttp</a> is an HTTP client for Java and Kotlin that’s efficient by default with a strong focus on production readiness - performance, reliability and security. OkHttp is an HTTP client that’s efficient by default, HTTP/2 support allows all requests to the same host to share a socket and connection pooling reduces request latency (if HTTP/2 isn’t available). Transparent GZIP shrinks download sizes and esponse caching avoids the network completely for repeat requests. OkHttp perseveres when the network is troublesome and supports modern TLS features (TLS 1.3, ALPN, certificate pinning). It can be configured to fall back for broad connectivity. ",Promote,Comms,
+Axios,Promote,Languages and Frameworks,FALSE,"<a href=""https://axios-http.com/docs/intro"">axios</a> is a promise-based HTTP Client for node.js and the browser. On the server-side it uses the native node.js <code>http</code> module, while on the client (browser) it uses XMLHttpRequests.",Promote,Comms,
+SLF4J,Promote,Languages and Frameworks,FALSE,"<a href=""https://www.slf4j.org/"">SLF4J</a> serves as a simple facade or abstraction for various Java logging frameworks (e.g. logback) allowing services to plug in the desired logging framework at deployment time.",Promote,Log,
+Logback,Promote,Languages and Frameworks,FALSE,"<a href=""https://logback.qos.ch/"">Logback</a> is a Java logging framework intended to be a successor to the popular log4j project. Logback is the default logging framework in Micronaut and Spring Boot.",Promote,Log,
+Log4J,Hold,Languages and Frameworks,FALSE,"<a href=""https://logging.apache.org/log4j"">Log4J</a> is a Java logging utility that used across a number of legacy services however it is now recommended to use SLF4J/Logback, any users of Log4j 1 should migrate to Logback.",Retire,,
+OpenTelemetry,Evaluate,Languages and Frameworks,FALSE,"<a href=""https://opentelemetry.io/"">OpenTelemetry</a> is an open source and vendor-neutral API for distributed tracing (including logs and errors) and metrics. With OpenTelemetry, applications can be instrumented once and use any OpenTelemetry-compatible backends without changing the instrumentation.<br/>
+<br/>
+OpenTelemetry (OTel) is compatible with the languages used in API and can export Prometheus metrics so is compatible with our existing Victoria Metrics platform. OTel is being evaluated as it provides compatability for future tracing solutions while working with the current platform.",Evaluate,Observability,
+Micrometer,Promote,Languages and Frameworks,FALSE,"<a href=""https://micrometer.io/docs"">Micrometer</a> is a Java observability library that provides instrumentation for common frameworks (e.g. OkHttp) and can publish Prometheus metrics. Micrometer is the default logging framework in Micronaut and Spring Boot.",Promote,Observability,
+Jackson,Promote,Languages and Frameworks,FALSE,"<a href=""https://github.com/FasterXML/jackson"">Jackson</a> is a suite of data-processing tools for Java (and the JVM platform), including the flagship streaming JSON parser / generator library, matching data-binding library (POJOs to and from JSON) and additional data format modules to process data encoded in Avro, BSON, CBOR, CSV, Smile, (Java) Properties, Protobuf, TOML, XML or YAML.",Promote,Serialization,
+Reactor,Pilot,Languages and Frameworks,FALSE,"<a href=""https://projectreactor.io/"">Reactor</a> is a fourth-generation reactive library, based on the Reactive Streams specification, for building non-blocking applications on the JVM.",Pilot,,
+Storybook,Promote,Languages and Frameworks,FALSE,"<a href=""https://storybook.js.org/"">Storybook</a> is a frontend workshop for building UI components and pages in isolation. Thousands of teams use it for UI development, testing, and documentation. It’s open source and free.",Promote,,
+Tool,Pilot,Tools and Techniques,FALSE,,Pilot,,
+Compute,Pilot,Compute; Runtime; Networking,FALSE,,Pilot,,
