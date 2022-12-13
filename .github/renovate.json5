@@ -20,6 +20,7 @@
     "pre-commit",
     "regex"
   ],
+  includeForks: true,
   labels: [
     "dependencies"
   ],
