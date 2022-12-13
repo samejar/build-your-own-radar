@@ -1,0 +1,43 @@
+{
+  extends: [
+    "config:base",
+    ":enableRenovate",
+    ":rebaseStalePrs",
+    ":semanticCommits",
+    ":separatePatchReleases",
+    ":enablePreCommit"
+  ],
+  assignees: [
+    "samejar"
+  ],
+  dependencyDashboard: true,
+  dependencyDashboardTitle: "Renovate Dashboard 🤖",
+  dependencyDashboardAutoclose: true,
+  enabledManagers: [
+    "npm",
+    "nodenv",
+    "github-actions",
+    "pre-commit",
+    "regex"
+  ],
+  labels: [
+    "dependencies"
+  ],
+  platform: "github",
+  repositories: [
+    "samejar/build-your-own-radar"
+  ],
+  //Rules for major
+  major: {
+    dependencyDashboardApproval: true
+  },
+  packageRules: [
+    // Setup datasources
+    {
+      "matchDatasources": [
+        "npm"
+      ],
+      "stabilityDays": 3
+    },
+  ]
+}
